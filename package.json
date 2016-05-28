@@ -1,0 +1,19 @@
+{
+  "name": "drs_project_tracker",
+  "version": "1.0.0",
+  "description": "Project tracker for the Dead Rabbit Society",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Carolyn Cochran",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "method-override": "^2.3.6",
+    "mongoose": "^4.4.19",
+    "morgan": "^1.7.0"
+  }
+}

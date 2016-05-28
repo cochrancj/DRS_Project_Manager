@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- This assigns our Angular module -->
+<html ng-app="todoApp">
+  <head>
+    <meta charset="utf-8">
+<!-- Sets Viewport for Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dead Rabbit Society Project Parameters</title>
+<!-- JQuery & Angular & Materialize -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<!-- Local JS -->
+    <script src="core.js"></script>
+<!-- Compiled and minified Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+<!-- local css styles  -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body ng-controller="mainController">
+
+    <header>
+      <h1>Dead Rabbit Society Project Priority List </h1>
+      <h3>There are currently: {{ todo.length }} Things That Need Doing</h3>
+    </header>
+
+    <div class="row">
+      <div class="todo-list col s8">
+        <ul>
+          <li ng-repeat="todo in todos | filter:{name:priority} | orderBy:orderByField:reverse">
+              <h3><input type="checkbox" ng-click="deleteTodo(todo._id)"> {{ todo.title }}</h3>
+              <h5> {{ todo.details }}</h5>
+              <h5> {{ todo.priority }}</h5>
+              <h5> {{ todo.contact }}</h5>
+              <h5> {{ todo.timestamps }}</h5>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+<!-- Form To Create New To-Dos -->
+  <div class="row">
+    <form id="new-todo" class="col s8" ng-submit="createTodo(todo)">
+      <div class="row">
+        <div class="input-field col s4">
+<!-- Ng-model binds the data to formData.text in angular -->
+          <input id="todo" type="text" class="validate" name="title" ng-model="todo.title">
+          <label for="todo">What Needs Doing?</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="details" type="text" class="validate" name="details" ng-model="todo.details">
+          <label for="details">Deed Details</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="priority" type="number" class="validate" name="priority" ng-model="todo.priority">
+          <label for="priority">Priority Level</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="contact" type="text" class="validate" name="contact" ng-model="todo.contact">
+          <label for="contact">Contact</label>
+        </div>
+      </div>
+<!-- Ng-click allows for the creation of the to-do -->
+      <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+    </form>
+  </div>
+
+  </body>
+</html>
