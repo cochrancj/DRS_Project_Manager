@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- This assigns our Angular module -->
+<html ng-app="ProjectDirectives">
+  <head>
+    <meta charset="utf-8">
+    <title>Dead Rabbit Society Mission Directives</title>
+<!-- Sets Viewport for Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Custom Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
+<!-- JQuery & Angular & Materialize -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<!-- Local JS -->
+    <script src="/js/services/directivesAPI.js"></script>
+    <script src="/js/controllers/directives.js" charset="utf-8"></script>
+    <script src="/js/controllers/users.js" charset="utf-8"></script>
+    <script src="/js/app.js" charset="utf-8"></script>
+<!-- Compiled and minified Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+<!-- local css styles  -->
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+
+    <header class="UsersController">
+      <div class="row">
+        <div class="col s8 offset-s2">
+          <h3>Dead Rabbit Society Mission Directives </h3>
+          <h6>Things That Need Doing</h6>
+        </div>
+      </div>
+    </header>
+
+    <div class="container" id="main" ng-controller="DirectivesController">
+      <div class="row">
+        <div class="col s8 offset-s2">
+          <ul>
+            <li ng-repeat="directive in directives">
+            <!-- ADD ABILITY TO SORT BY PRIORITY LEVEL:  | filter:{name:priority} | orderBy:orderByField:reverse -->
+            <!-- ADD COLOR FOR SPECIFIC PRIORITY LEVELS -->
+
+              <!-- <article class="directive"> -->
+              <div class="card-panel #ef5350 red lighten-1">
+                <input type="checkbox" id="directive" ng-click="removeDirective(directive)"/>
+                <label for="directive">{{ directive.title }}</label>
+                <p>Details: {{ directive.details }}</p>
+                <p>Priority Level: {{ directive.priority }}</p>
+                <p>Contact: {{ directive.contact }}</p>
+                <p>Created On: {{ directive.timestamps }}</p>
+              </div>
+              <!-- </article> -->
+              <hr>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+<!-- Form To Create New To-Dos -->
+      <div class="row">
+        <form class="col s8 offset-s2" ng-submit="saveDirective(directive)">
+          <div class="row">
+            <div class="input-field col s6">
+              <input type="text" class="validate" name="title" ng-model="directive.title">
+              <label for="todo">What Needs Doing?</label>
+            </div>
+            <div class="input-field col s6">
+              <input type="text" class="validate" name="details" ng-model="directive.details">
+              <label for="details">Deed Details</label>
+            </div>
+            <div class="input-field col s6">
+              <input type="number" class="validate" name="priority" ng-model="directive.priority">
+              <label for="priority">Priority Level</label>
+            </div>
+            <div class="input-field col s6">
+              <input type="text" class="validate" name="contact" ng-model="directive.contact">
+              <label for="contact">Contact</label>
+            </div>
+          </div>
+    <!-- Ng-click allows for the creation of the to-do -->
+          <button class="btn waves-effect waves-light" type="submit" name="action" ng-click="saveDirective(directive)">Add Directive</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="page-footer #e53935 red darken-1">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text"><a href="https://the-dead-raibead-warren.myshopify.com/">The Warren</a></h5>
+            <p class="grey-text text-lighten-4">In the Dead Rabbit Society, we hold that every person should be striving to be the passionate warrior poet, full of life and wisdom and compassion... With the capacity for extreme violence when summoned. We are all people to be feared... but we should focus most of our energies on helping others and being involved in our local communities.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Ongoing Missions</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Latini Family</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Mission 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Mission 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Mission 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2016 The Dead Raibead Warren
+        <a class="grey-text text-lighten-4 right" href="https://www.facebook.com/groups/210636279281212/"> | Facebook | </a>
+        <a class="grey-text text-lighten-4 right" href="https://instagram.com/cadrewhitedoug">| Instagram | </a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
