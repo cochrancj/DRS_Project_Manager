@@ -27,8 +27,8 @@
 
     <header class="UsersController">
       <div class="row">
-        <div class="col s8 offset-s2">
-          <h3>Dead Rabbit Society Mission Directives </h3>
+        <div class="col s9 offset-s2">
+          <h4>DEAD RABBIT SOCIETY MISSION DIRECTIVES </h4>
           <h6>Things That Need Doing</h6>
         </div>
       </div>
@@ -41,16 +41,17 @@
             <li ng-repeat="directive in directives">
             <!-- ADD ABILITY TO SORT BY PRIORITY LEVEL:  | filter:{name:priority} | orderBy:orderByField:reverse -->
             <!-- ADD COLOR FOR SPECIFIC PRIORITY LEVELS -->
+            <!-- TO-DOS NO LONGER SHOWING UP -->
 
               <!-- <article class="directive"> -->
-              <div class="card-panel #ef5350 red lighten-1">
-                <input type="checkbox" id="directive" ng-click="removeDirective(directive)"/>
+              <!-- <div class="card-panel #ef5350 red lighten-1"> -->
+                <input type="checkbox" id="directive" ng-click="removeDirective(directive.id)"/>
                 <label for="directive">{{ directive.title }}</label>
                 <p>Details: {{ directive.details }}</p>
                 <p>Priority Level: {{ directive.priority }}</p>
                 <p>Contact: {{ directive.contact }}</p>
                 <p>Created On: {{ directive.timestamps }}</p>
-              </div>
+              <!-- </div> -->
               <!-- </article> -->
               <hr>
             </li>
@@ -89,11 +90,11 @@
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
-            <h5 class="white-text"><a href="https://the-dead-raibead-warren.myshopify.com/">The Warren</a></h5>
+            <h5 class="white-text"><a href="https://the-dead-raibead-warren.myshopify.com/">THE WARREN</a></h5>
             <p class="grey-text text-lighten-4">In the Dead Rabbit Society, we hold that every person should be striving to be the passionate warrior poet, full of life and wisdom and compassion... With the capacity for extreme violence when summoned. We are all people to be feared... but we should focus most of our energies on helping others and being involved in our local communities.</p>
           </div>
           <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Ongoing Missions</h5>
+            <h5 class="white-text">ONGOING MISSIONS</h5>
             <ul>
               <li><a class="grey-text text-lighten-3" href="#!">Latini Family</a></li>
               <li><a class="grey-text text-lighten-3" href="#!">Mission 2</a></li>
