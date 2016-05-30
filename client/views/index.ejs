@@ -39,21 +39,20 @@
         <div class="col s8 offset-s2">
           <ul>
             <li ng-repeat="directive in directives">
-            <!-- ADD ABILITY TO SORT BY PRIORITY LEVEL:  | filter:{name:priority} | orderBy:orderByField:reverse -->
+            <!-- <li ng-repeat="directive in directives | filter:{priority:directive.priority} | orderBy:orderByField:reverse"> -->
             <!-- ADD COLOR FOR SPECIFIC PRIORITY LEVELS -->
-            <!-- TO-DOS NO LONGER SHOWING UP -->
 
-              <!-- <article class="directive"> -->
-              <!-- <div class="card-panel #ef5350 red lighten-1"> -->
-                <input type="checkbox" id="directive" ng-click="removeDirective(directive.id)"/>
-                <label for="directive">{{ directive.title }}</label>
-                <p>Details: {{ directive.details }}</p>
-                <p>Priority Level: {{ directive.priority }}</p>
-                <p>Contact: {{ directive.contact }}</p>
-                <p>Created On: {{ directive.timestamps }}</p>
-              <!-- </div> -->
-              <!-- </article> -->
-              <hr>
+              <article class="directive">
+                <div class="card-panel">
+                <!-- <div class="card-panel #ef5350 red lighten-1"> -->
+                  <input type="checkbox" id="directive" ng-click="removeDirective(directive.id)"/>
+                  <label for="directive">{{ directive.title }}</label>
+                  <p>Details: {{ directive.details }}</p>
+                  <p>Priority Level: {{ directive.priority }}</p>
+                  <p>Contact: {{ directive.contact }}</p>
+                  <!-- <p>Created On: {{ directive.timestamps }}</p> -->
+                </div>
+              </article>
             </li>
           </ul>
         </div>
@@ -81,7 +80,7 @@
             </div>
           </div>
     <!-- Ng-click allows for the creation of the to-do -->
-          <button class="btn waves-effect waves-light" type="submit" name="action" ng-click="saveDirective(directive)">Add Directive</button>
+          <button class="btn waves-effect waves-light" type="submit" name="action">Add Directive</button>
         </form>
       </div>
     </div>
