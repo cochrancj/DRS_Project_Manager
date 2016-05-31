@@ -38,15 +38,17 @@
       <div class="row">
         <div class="col s8 offset-s2">
           <ul>
-            <li ng-repeat="directive in directives">
-            <!-- <li ng-repeat="directive in directives | filter:{priority:directive.priority} | orderBy:orderByField:reverse"> -->
+            <li ng-repeat="directive in directives | orderBy: 'priority'">
+
             <!-- ADD COLOR FOR SPECIFIC PRIORITY LEVELS -->
 
               <article class="directive">
                 <div class="card-panel">
                 <!-- <div class="card-panel #ef5350 red lighten-1"> -->
-                  <input type="checkbox" id="directive" ng-click="removeDirective(directive.id)"/>
-                  <label for="directive">{{ directive.title }}</label>
+                <a class="waves-effect waves-light btn" id="directive" ng-click="removeDirective(directive._id)">Task Complete</a>
+                <h6>{{ directive.title }}</h6>
+                  <!-- <input type="checkbox" id="directive" ng-click="removeDirective(directive.id)"/>
+                  <label for="directive">{{ directive.title }}</label> -->
                   <p>Details: {{ directive.details }}</p>
                   <p>Priority Level: {{ directive.priority }}</p>
                   <p>Contact: {{ directive.contact }}</p>

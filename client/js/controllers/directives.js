@@ -21,7 +21,15 @@ angular
     directivesAPI.getAll().then(function(response){
       console.log(response);
       $scope.directives = response.data.directives;
+      // $scope.directives.filter = response.data.priority;
+      $filter('orderBy')(directives.priority, reverse);
     })
+
+  //   $scope.orderDirectives = function(directive){
+  //   $scope.directives.filter(function(p){
+  //       return p._id = directive._id
+  //     })
+  // }
 
     $scope.removeDirective = function(directive){
       directivesAPI.remove(directive._id).then(function(response){
