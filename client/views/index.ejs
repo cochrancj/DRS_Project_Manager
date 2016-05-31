@@ -44,15 +44,11 @@
 
               <article class="directive">
                 <div class="card-panel">
-                <!-- <div class="card-panel #ef5350 red lighten-1"> -->
-                <a class="waves-effect waves-light btn" id="directive" ng-click="removeDirective(directive._id)">Task Complete</a>
-                <h6>{{ directive.title }}</h6>
-                  <!-- <input type="checkbox" id="directive" ng-click="removeDirective(directive.id)"/>
-                  <label for="directive">{{ directive.title }}</label> -->
-                  <p>Details: {{ directive.details }}</p>
-                  <p>Priority Level: {{ directive.priority }}</p>
-                  <p>Contact: {{ directive.contact }}</p>
-                  <!-- <p>Created On: {{ directive.timestamps }}</p> -->
+                <h5>{{ directive.title }}</h5>
+                  <p><span class="bold">Details:</span> {{ directive.details }}</p>
+                  <p><span class="bold">Priority Level:</span> {{ directive.priority }}</p>
+                  <p><span class="bold">Contact:</span> {{ directive.contact }}</p>
+                  <a class="waves-effect waves-light btn" id="directive" ng-click="removeDirective(directive)">Task Complete</a>
                 </div>
               </article>
             </li>
