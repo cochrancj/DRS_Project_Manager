@@ -13,7 +13,7 @@
     app.set('views', __dirname + '/client/views')
     app.set('view engine', 'ejs')
 // connects to the mongoDB database
-    mongoose.connect('mongodb://localhost/directives_api')
+    mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/directives_api')
 // use body parser to "read" the applicaiton
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended:true}));
@@ -26,6 +26,6 @@
 
 
 // SET THE PORT WE ARE LISTENING TO
-    app.listen(8080, function(){
+    app.listen(process.env.PORT || 8080, function(){
         console.log("...free tacos over on 8080, pass it on...");
     });
