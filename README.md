@@ -18,6 +18,7 @@ This single page application is intended to be a project task manager for Dead R
 
 #### Wireframes
 
+![Wireframe](DRS-Tasks.jpg "wireframe")
 
 #### User Story
 
