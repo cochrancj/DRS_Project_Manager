@@ -5,7 +5,16 @@ Dead Rabbit Society Project Manager README
 
 This single page application is intended to be a project task manager for Dead Rabbit Society campaigns. The tasks are available as a JSON API. 
 
+#### Log In Information
+
+###### https://damp-forest-58528.herokuapp.com/ 
+###### username:
+###### password:
+
 #### Screen Shots
+
+![Landing Page - top](DRS-top.jpg "landing page - top")
+![Landing Page - bottom](DRS-bottom.jpg "landing page - bottom")
 
 #### Wireframes
 
