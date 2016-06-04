@@ -27,7 +27,6 @@ router.post('/', function(req, res){
 
 
 // Delete
-
 router.delete('/:id', function(req, res) {
   console.log('deleting!');
   Directive.findByIdAndRemove(req.params.id, function(err){

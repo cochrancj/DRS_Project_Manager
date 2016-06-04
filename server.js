@@ -5,7 +5,6 @@
     var mongoose = require('mongoose');
     var bodyParser = require('body-parser');
 
-
 // CONFIGURE THE SERVER
 // use express to set the static files(located in client)
     app.use(express.static('./client'));
@@ -23,7 +22,6 @@
 // use the index and API routers
     app.use('/', indexRouter);
     app.use('/api/directives', directivesRouter);
-
 
 // SET THE PORT WE ARE LISTENING TO
     app.listen(process.env.PORT || 8080, function(){

@@ -39,9 +39,7 @@
         <div class="col s8 offset-s2">
           <ul>
             <li ng-repeat="directive in directives | orderBy: 'priority'">
-
             <!-- ADD COLOR FOR SPECIFIC PRIORITY LEVELS -->
-
               <article class="directive">
                 <div class="card-panel">
                 <h5>{{ directive.title }}</h5>
@@ -55,7 +53,6 @@
           </ul>
         </div>
       </div>
-
 <!-- Form To Create New To-Dos -->
       <div class="row">
         <form class="col s8 offset-s2" ng-submit="saveDirective(directive)">
@@ -82,7 +79,7 @@
         </form>
       </div>
     </div>
-
+<!-- Footer -->
     <footer class="page-footer #e53935 red darken-1">
       <div class="container">
         <div class="row">
