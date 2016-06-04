@@ -3,7 +3,7 @@ Dead Rabbit Society Project Manager README
 
 ### Introduction
 
-This app is intended to be a project task manager for Dead Rabbit Society campaigns. The tasks are available as a JSON API. 
+This single page application is intended to be a project task manager for Dead Rabbit Society campaigns. The tasks are available as a JSON API. 
 
 #### Screen Shots
 
@@ -12,7 +12,7 @@ This app is intended to be a project task manager for Dead Rabbit Society campai
 
 #### User Story
 
-As a user, I want the ability to add directives for the current DRS mission, order tasks by priority, and delete tasks once they have been completed. 
+The Dead Rabbit Society is a charity organization started by my brother-in-law as a grassrots way for his fellow former service members and likeminded individuals to help soldiers and veterans in need. This community needed a way to simply and quickly be able to identify tasks that need to be completed in any given mission (complete with whom is running point); need to be able to see which tasks take precedence; and need to be able to close tasks once they are done.
 
 #### General Approach
 
@@ -32,7 +32,11 @@ My general approach to this task was to create the basic list functionality firs
 
 ### Dependencies
 
--
+- angular 1.4.9
+- body-parser 1.15.1
+- express 4.13.4
+- ejs 2.4.1
+- mongoose 4.4.19
 
 ### Installation 
 
