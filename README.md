@@ -58,4 +58,4 @@ My general approach to this task was to create the basic list functionality firs
 
 ### Support 
 
-Users looking for support should file an issue on the [GitHub issue tracking page] (https://github.com/cochrancj/Game_Of_Fitness/issues/7 "Git Issue Tracking Page"), **or** [create a pull request] (https://github.com/cochrancj/Game_Of_Fitness/pulls "Create A Pull Request") if you have a fix you would like incorporated.
+Users looking for support should file an issue on the [GitHub issue tracking page] (https://github.com/cochrancj/DRS_Project_Manager/issues "Git Issue Tracking Page"), **or** [create a pull request] (https://github.com/cochrancj/DRS_Project_Manager/pulls "Create A Pull Request") if you have a fix you would like incorporated.
