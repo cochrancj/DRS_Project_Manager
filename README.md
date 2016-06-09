@@ -63,8 +63,10 @@ My general approach to this task was to create the basic list functionality firs
 
    ⋅⋅ `git clone` and paste the URL you have on the clipboard.
    Hit Enter.
+   
+6. run 'npm install' to get your dependencies in line. 
 
-6. To install the database:
+7. To spin up the database:
 
    ⋅⋅ cd into the repository location
    ⋅⋅ run `mongod`
